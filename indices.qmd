@@ -1,0 +1,107 @@
+---
+title: "Acoustic-Based Biodiversity Indices"
+---
+
+### Soundscape Metrics
+
+Soundscape measurements refer to the quantitative analysis of the sounds present in a particular environment, capturing not only individual sounds but also their patterns, frequencies, and intensities over time. These measurements are important in relation to biodiversity indices for several reasons:
+
+1.  **Indicator of Biodiversity**: The diversity and composition of species within an ecosystem can be inferred from the soundscape. Different species produce distinct sounds, and the presence or absence of certain sounds can indicate the presence or absence of particular species. For example, the diversity of bird calls in a forest can be used as an indicator of avian biodiversity.
+
+2.  **Non-invasive Monitoring**: Soundscape measurements offer a non-invasive way to monitor biodiversity. Unlike traditional methods such as trapping or visual surveys, which can be disruptive and time-consuming, recording and analyzing soundscape data can be done remotely and continuously, providing valuable insights into biodiversity without disturbing the ecosystem.
+
+3.  **Temporal and Spatial Dynamics**: Soundscape measurements capture the temporal and spatial dynamics of biodiversity. By analyzing changes in sound patterns and intensity over time and across different locations within an ecosystem, researchers can identify patterns of species activity, migration, and distribution, providing a more comprehensive understanding of biodiversity dynamics.
+
+4.  **Early Warning System**: Changes in the soundscape can serve as an early warning system for ecosystem health. Alterations in sound patterns, such as the decline or disappearance of certain species' vocalizations, can indicate disturbances or threats to biodiversity, such as habitat loss, pollution, or invasive species encroachment, allowing for timely intervention and conservation efforts.
+
+5.  **Integration with Biodiversity Indices**: Soundscape measurements can be integrated with traditional biodiversity indices to enhance their accuracy and comprehensiveness. By combining acoustic data with other ecological data, such as species abundance and habitat characteristics, researchers can develop more robust biodiversity assessments that capture the full spectrum of biodiversity within an ecosystem.
+
+![](images/Underwater_Acoustics.png){fig-align="left" width="475"}
+
+### Acoustic-based Biodiversity Indices
+
+For this exploratory study we use the package scikit-maad, a tool commonly used in the terrestrial community. [Scikit-maad](https://scikit-maad.github.io/#), short for "Machine learning for Acoustic Activity Detection," is a Python package designed for the analysis of acoustic data, particularly for bioacoustic applications. It provides a comprehensive set of tools and functions for processing, extracting features from, and analyzing soundscape recordings. Scikit-maad is primarily focused on facilitating the use of machine learning techniques for tasks such as acoustic event detection, species classification, and biodiversity monitoring.
+
+The developers of scikit-maad are a team of researchers and developers passionate about bioacoustics and computational ecology. They have expertise in signal processing, machine learning, and ecology, and their aim is to provide accessible and powerful tools for analyzing acoustic data and advancing research in the field of bioacoustics. The development of scikit-maad is supported by contributions from the open-source community and collaborations with researchers and practitioners in various domains related to acoustic ecology and biodiversity monitoring.
+
+Below is a summary of the available spectro-temporal features, alpha acoustic indices, temporal features, and spectral features in scikit-maad:
+
+**Spectro-Temporal Features**:
+
+1.  **Spectral Band Envelope Statistics**:
+
+    -   Description: Statistics (mean, variance, skewness, kurtosis) of the spectral envelope within predefined frequency bands.
+
+2.  **Spectral Flux**:
+
+    -   Description: Measures the rate of change in spectral energy over time, indicating the dynamics of spectral content.
+
+3.  **Spectral Flatness**:
+
+    -   Description: Quantifies the flatness or tonality of a spectrum, indicating the balance between noise-like and tonal components.
+
+4.  **Spectral Kurtosis**:
+
+    -   Description: Measures the peakedness or sharpness of spectral peaks, providing information about the distribution of energy across frequencies.
+
+5.  **Spectral Roll-off**:
+
+    -   Description: Frequency below which a certain percentage (e.g., 95%) of the total spectral energy is contained, indicating the spectral cutoff frequency.
+
+**Alpha Acoustic Indices**:
+
+1.  **Acoustic Complexity Index (ACI)**:
+
+    -   Description: Measures the complexity of the acoustic environment by analyzing temporal patterns and variability of sound energy across frequency bands.
+
+2.  **Acoustic Diversity Index (ADI)**:
+
+    -   Description: Measures the diversity of acoustic events within a recording, considering both richness and evenness of acoustic activity.
+
+3.  **Acoustic Evenness Index (AEI)**:
+
+    -   Description: Evaluates the evenness of acoustic activity distribution within a recording, indicating the balance among different types of events.
+
+4.  **Acoustic Presence Index (API)**:
+
+    -   Description: Indicates the presence or absence of acoustic events within a recording, providing a binary measure of activity.
+
+5.  **Acoustic Rarity Index (ARI)**:
+
+    -   Description: Measures the rarity of acoustic events within a recording, considering the frequency and distribution of occurrence.
+
+**Temporal Features**:
+
+1.  **Inter-Event Intervals (IEI)**:
+
+    -   Description: Measures the time intervals between successive acoustic events, providing insights into event timing and rhythm.
+
+2.  **Sound Event Duration (SED)**:
+
+    -   Description: Duration of individual sound events, indicating their temporal extent and persistence.
+
+3.  **Sound Event Rate (SER)**:
+
+    -   Description: Rate of occurrence of sound events over time, providing a measure of activity intensity.
+
+4.  **Temporal Envelope Statistics**:
+
+    -   Description: Statistics (mean, variance, skewness, kurtosis) of the temporal envelope of sound signals.
+
+**Spectral Features**:
+
+1.  **Band Energy Ratios (BER)**:
+
+    -   Description: Ratios of energy within different frequency bands, providing insights into spectral energy distribution.
+
+2.  **Frequency Modulation (FM)**:
+
+    -   Description: Measures the rate of change in frequency over time, indicating the presence of frequency modulation in signals.
+
+3.  **Mel-Frequency Cepstral Coefficients (MFCC)**:
+
+    -   Description: Coefficients derived from the mel-frequency cepstrum of a signal, capturing spectral characteristics important for speech and audio processing.
+
+4.  **Spectral Centroid**:
+
+    -   Description: Center of mass of the power spectrum, indicating the "brightness" or average frequency of a signal.

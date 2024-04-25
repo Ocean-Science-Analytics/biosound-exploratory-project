@@ -3,16 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "BioSound_Documentation"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  title: "BioSound Exploratory Project"
+  sidebar:
+    style: "docked"
+    search: true
+    background: dark
+    logo: images/BioSound.png
+    contents:
+        - text: "Project Overview"
+          file: overview.qmd
+        - text: "Acoustic Indices"
+          file: indices.qmd
+        - text: "Data Management"
+          file: data.qmd
+        - text: "Evaluating Indices"
+          file: analysis.qmd  
 
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
     toc: true
 

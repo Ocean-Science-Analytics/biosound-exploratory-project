@@ -1,0 +1,19 @@
+---
+title: "Data Management"
+---
+
+### Data Management Requirements
+
+Comparing acoustic data from different regions and providers can be complex due to variations in sampling rate, file duration, and file naming conventions. Differing sampling rates can affect the resolution and frequency content of recordings, while variations in file duration may influence the amount of data available for analysis. Additionally, inconsistencies in file naming conventions can hinder data organization and interoperability, requiring careful preprocessing and standardization efforts to ensure accurate and meaningful comparisons across datasets.
+
+The following were:
+
+-   One
+
+-   Two
+
+-   Three
+
+A workflow representation
+
+![](images/BioSound_Workflow.png){fig-align="center"}
