@@ -8,7 +8,7 @@ website:
     style: "docked"
     search: true
     background: dark
-    logo: images/BioSound_v2.png
+    logo: images/BioSound.png
     contents:
         - text: "Project Overview"
           file: overview.qmd

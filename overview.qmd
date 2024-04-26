@@ -15,13 +15,15 @@ Explore the data collected during this pilot study via our dashboard:
 
 #### [BioSound Data Exploration Dashboard](https://waveform-analytics.shinyapps.io/biosound-mbon/)
 
-This data includes many things and here's the workflow:
+The analytical workflow for multiple components begins with collecting raw audio files from 8 distinct datasets. These files undergo comprehensive data management steps, including preprocessing and standardization, to enable the extraction of acoustic indices in multiple comparable ways across datasets. Additionally, annotations of vessel activity and, where feasible, organismal occurrences are integrated with environmental data to provide context for the acoustic recordings. Subsequently, the processed data are incorporated into a user-interactive dashboard designed for evaluating data across sites and indices. This dashboard facilitates comprehensive exploration and analysis, enabling researchers to gain insights into the relationships between acoustic indices, environmental factors, and biological activity across diverse marine environments.
 
 ![](images/BioSound_Workflow.png){fig-align="center"}
 
-These details are included
-
 ### The Datasets
+
+The datasets utilized in this study originate from diverse environments, including offshore, mangrove, and reef ecosystems, spanning both the Pacific and Atlantic Oceans. These datasets have been contributed by members of the BioSound working group, highlighting a collaborative effort to incorporate acoustic data from various marine habitats for comprehensive analysis. Below, a map and table delineate the specific datasets employed in this study, providing geographic context and detailed information about each dataset's characteristics.
+
+![](images/BioSound_Sites.png){fig-align="center"}
 
 | Col1 | Col2 | Col3 | Col4 |
 |------|------|------|------|
@@ -37,4 +39,12 @@ These details are included
 
 ### Environmental Data
 
-MBON Water Classes
+[SeascapeR](https://marinebon.org/mbonproduct/seascapes-for-sanctuaries/), a powerful tool developed by the Marine Biodiversity Observation Network (MBON), offers extensive capabilities for analyzing and visualizing marine habitat data. Leveraging SeascapeR, we are conducting comparative analyses between distinct water classes and acoustic indices, allowing us to explore the relationships between habitat characteristics and acoustic biodiversity across diverse marine environments with unparalleled depth and precision.
+
+![](images/seascapeR.png){width="629"}
+
+### Dashboard and Documentation
+
+Ocean Science Analytics (OSA) spearheads the analytical effort, employing advanced data analytics techniques to derive meaningful insights from the diverse marine datasets. Additionally, OSA and Waveform Analytics have collaborated closely on the development of an interactive dashboard, as well as comprehensive documentation, to facilitate intuitive exploration and interpretation of the integrated acoustic and environmental data.
+
+![](images/OSA_WA.png){width="498"}
