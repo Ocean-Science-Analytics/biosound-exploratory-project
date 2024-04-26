@@ -15,5 +15,3 @@ The following were:
 -   Three
 
 A workflow representation
-
-![](images/BioSound_Workflow.png){fig-align="center"}
