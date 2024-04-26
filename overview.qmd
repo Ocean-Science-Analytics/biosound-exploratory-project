@@ -14,3 +14,9 @@ The group's initial project begins with a focused initiative to compare acoustic
 Explore the data collected during this pilot study via our dashboard:
 
 #### [BioSound Data Exploration Dashboard](https://waveform-analytics.shinyapps.io/biosound-mbon/)
+
+This data includes many things:
+
+The Datasets
+
+Environmental Data
