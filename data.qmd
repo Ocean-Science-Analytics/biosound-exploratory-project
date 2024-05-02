@@ -14,4 +14,8 @@ The following were:
 
 -   Three
 
-A workflow representation
+These are the steps:
+
+Buffers created with 0.55 degrees which works out to an approximate 60 km by 60 km regions surrounding each hydrophone.
+
+![](images/Buffers_0.55deg.png){fig-align="center"}

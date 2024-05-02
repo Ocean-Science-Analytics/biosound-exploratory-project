@@ -25,17 +25,17 @@ The datasets utilized in this study originate from diverse environments, includi
 
 ![](images/BioSound_Sites.png){fig-align="center"}
 
-| Col1 | Col2 | Col3 | Col4 |
-|------|------|------|------|
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
+| Dataset Name | Source | Marine Ecosystem Type | Native Sampling Rate | Native Duration |
+|--------------|--------|-----------------------|----------------------|-----------------|
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
+|              |        |                       |                      |                 |
 
 ### Environmental Data
 
