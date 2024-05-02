@@ -27,7 +27,7 @@ The datasets utilized in this study originate from diverse environments, includi
 
 | Dataset Name | Source | Marine Ecosystem Type | Native Sampling Rate | Native Duration |
 |--------------|--------|-----------------------|----------------------|-----------------|
-|              |        |                       |                      |                 |
+| Caesar       |        |                       |                      |                 |
 |              |        |                       |                      |                 |
 |              |        |                       |                      |                 |
 |              |        |                       |                      |                 |
@@ -45,6 +45,6 @@ The datasets utilized in this study originate from diverse environments, includi
 
 ### Dashboard and Documentation
 
-[Ocean Science Analytics (OSA)](https://www.oceanscienceanalytics.com/) spearheads the analytical effort, employing advanced data analytics techniques to derive meaningful insights from the diverse marine datasets. Additionally, OSA and [Waveform Analytics](https://waveformanalytics.com/) collaborated closely on the development of an interactive dashboard, data integration, and comprehensive documentation to facilitate intuitive exploration and interpretation of the integrated acoustic and environmental data.
+[Ocean Science Analytics (OSA)](https://www.oceanscienceanalytics.com/) spearheads the analytical effort, employing advanced data analytics techniques to derive meaningful insights from diverse marine datasets. Additionally, OSA and [Waveform Analytics](https://waveformanalytics.com/) collaborated closely on the development of an interactive dashboard, data integration, and comprehensive documentation to facilitate intuitive exploration and interpretation of the integrated acoustic and environmental data.
 
 ![](images/OSA_WA.png){width="498"}
