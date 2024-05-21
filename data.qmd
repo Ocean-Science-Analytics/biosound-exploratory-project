@@ -1,21 +1,29 @@
 ---
-title: "Data Management"
+title: "Data Processing & Management"
 ---
 
-### Data Management Requirements
+### Acoustic-based Indices
 
 Comparing acoustic data from different regions and providers can be complex due to variations in sampling rate, file duration, and file naming conventions. Differing sampling rates can affect the resolution and frequency content of recordings, while variations in file duration may influence the amount of data available for analysis. Additionally, inconsistencies in file naming conventions can hinder data organization and interoperability, requiring careful preprocessing and standardization efforts to ensure accurate and meaningful comparisons across datasets.
 
-The following were:
+The following steps were required to produce acoustic-based index variables:
 
--   One
+-   **Audio File Naming Convention**: scikit-maad extracts date and time information from audio file names and can accept one of two formats. For this project, we proceeded with the SM4 format, which consists of some prefix, followed by the date starting with year and time (e.g., PREFIX_YYYYMMDD_HHMMSS.wav). All datasets required audio file renaming in order to extract temporal information for plotting these time-series data. Per-site scripts generated for renaming files generated renamed copies of the data (to ensure originals were retained) are provided in the GitHub repository.
 
--   Two
+-   **File Segmentation**: Another challenge presented during this project was the limitations of processing data with large audio files, particularly the sanctuary data. This in addition to some programmatic challenges at calculating indices at specific durations, resulted in the need to segment audio files into smaller durations. For all sanctuary sites, audio files were segmented into 5-minute files, which was the largest duration for all datasets. Although a graphical user interface (GUI) was developed during this study to allow for user defined index calculations, this did not work for all datasets, so several required further segmentation into 2.5 minute files. Note that 120 and 150 second files are considered the same file duration as reducing the file duration from five minutes to smaller files required 150 second interval.
 
--   Three
+-   **Processing Limitations**: Processing a suite of 58 index variables for a month of data at a time is a computationally intensive process. As an example, processing one month of data with a 64 kHz sampling rate and 5-min interval at full bandwidth on a Windows 11 Desktop with an Intel Core i7-10700 CPU @2.9 GHz and 32 GB of RAM took an average of two and a half days to complete. Processing at the 30 second and 10 second intervals was not feasible for datasets with continuous, five-minute files. In an attempt to streamline the process by testing out an Amazon Warehouse Service (AWS) EC2 virtual machine instance, uploading a week of data took approximately 16 hours. We therefore did not proceed with the smallest duration index calculation for this exploratory project, but did evaluate 120/150 second durations for six of the eight datasets, and 300 seconds for five of the eight datasets. Potential solutions are discussed in the "Recommendations" section.
 
-These are the steps:
+------------------------------------------------------------------------
+
+### Environmental Data using SeascapeR
 
 Buffers created with 0.55 degrees which works out to an approximate 60 km by 60 km regions surrounding each hydrophone.
 
 ![](images/Buffers_0.55deg.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+### Data Compilation & Collation
+
+Compiling acoustic index variable data from multiple sites, each with varying durations and sampling rates, was essential for subsequent data summarization and visualization. Furthermore, consolidating annotation information, vessel occurrences at each site, and water class data is necessary to provide comprehensive context for the acoustic recordings and facilitate meaningful analysis.

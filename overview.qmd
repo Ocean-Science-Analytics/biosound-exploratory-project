@@ -11,11 +11,11 @@ The BioSound working group is composed of various scientists and stakeholders in
 
 The group's initial project begins with a focused initiative to compare acoustic-based biodiversity indices across various ocean environments, paving the way for a broader, more extensive analysis. These efforts aim to generate valuable data products highlighting biological sounds and habitat characteristics in regional ocean and coastal areas, while also providing recommendations for standardizing soundscape metric methods and enhancing standards within the bioacoustic community.
 
-Explore the data collected during this pilot study via our dashboard:
+Explore the data collected during this exploratory study via our dashboard:
 
 #### [BioSound Data Exploration Dashboard](https://waveform-analytics.shinyapps.io/biosound-mbon/)
 
-The analytical workflow for multiple components begins with collecting raw audio files from 8 distinct datasets. These files undergo comprehensive data management steps, including preprocessing and standardization, to enable the extraction of acoustic indices in multiple comparable ways across datasets. Additionally, annotations of vessel activity and, where feasible, organismal occurrences are integrated with environmental data to provide context for the acoustic recordings. Subsequently, the processed data are incorporated into a user-interactive dashboard designed for evaluating data across sites and indices. This dashboard facilitates comprehensive exploration and analysis, enabling researchers to gain insights into the relationships between acoustic indices, environmental factors, and biological activity across diverse marine environments.
+The analytical workflow for multiple components begins with collecting raw audio files from 8 distinct datasets. These files undergo comprehensive data management steps, including preprocessing and standardization, to enable the extraction of acoustic indices in multiple comparable ways across datasets. Additionally, annotations of vessel activity and, where feasible, organismal occurrences are integrated with environmental data to provide context for the acoustic recordings. Subsequently, the processed data are incorporated into a user-interactive dashboard designed for evaluating data across sites and indices. This dashboard facilitates comprehensive exploration and analysis, enabling researchers to gain insights into the relationships between acoustic indices, environmental factors, and biological activity across diverse marine environments. Additionally, scripts and data products obtained during this analysis are available in the Ocean Science Analytics [BioSound-Exploratory-Project GitHub site](https://github.com/Ocean-Science-Analytics/biosound-exploratory-project).
 
 ![](images/BioSound_Workflow.png){fig-align="center"}
 
@@ -25,21 +25,26 @@ The datasets utilized in this study originate from diverse environments, includi
 
 ![](images/BioSound_Sites.png){fig-align="center"}
 
-| Dataset Name | Source | Marine Ecosystem Type | Native Sampling Rate | Native Duration |
-|--------------|--------------|----------------|---------------|--------------|
-| Caesar       |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
-|              |        |                       |                      |                 |
+|      Dataset Name      |             Source             |          Contact           | Marine Ecosystem Type  | Native Sampling Rate (kHz) |          Duty Cycle           | Native File Duration | Selected Months |
+|:-----------:|:-------------:|:----------:|:-----------:|:--------:|:---------:|:--------:|:----------:|
+|      Caesar Creek      |      University of Miami       |        Abby Tinari         |        Mangrove        |             32             |    10 seconds every minute    |       0:00:10        | Feb - Mar, 2019 |
+|      Chuckchi Sea      |     Oregon Sate University     |       Kate Stafford        |        Offshore        |           16.384           |     25 minutes every hour     |       0:25:00        | Jan - Mar, 2019 |
+|   Gray's Reef (GR01)   |        NEFSC-SanctSound        |         Tim Rowell         |        Offshore        |             48             |          Continuous           |       5:40:00        | Jan - Feb, 2019 |
+| Key West (WDR_Grouper) |    Florida Fish & Wildlife     |       Jessica Keller       |       Coral Reef       |             48             | 30 seconds every five minutes |       0:00:30        | Feb - Mar, 2020 |
+|       May River        | U. of South Carolina, Beaufort | Alyssa Marian/ Eric Montie |        Estuary         |             80             |     2 minutes every hour      |       0:02:00        | Jan - Mar, 2019 |
+|  ONC (MEF Hydrophone)  |     Ocean Networks Canada      |        Jasper Kanes        |        Offshore        |             64             |          Continuous           |       0:05:00        | Jan - Feb, 2019 |
+|    OOI (HYDBBA 106)    | Ocean Observatories Initiative |        Liz Ferguson        |         Shelf          |             64             |          Continuous           |       0:05:00        | Jan - Feb, 2019 |
+|   SanctSound (HI01)    | Hawaiian Islands Humpback NMS  |         Eden Zang          |        Island/         |             48             |          Continuous           |       5:40:00        | Jan - Feb, 2019 |
+
+### Acoustic-based Indices
+
+We utilized [scikit-maad](https://scikit-maad.github.io/util.html), a comprehensive Python package tailored for acoustic analysis, to efficiently extract acoustic-based indices from our audio recordings. Its rich set of functionalities and easy-to-use interface provided us with the necessary tools to process and analyze acoustic data, enabling robust and standardized computation of biodiversity indices. An description of all indices is available from the "Acoustic Indices" tab, and required processing is indicated in the "Data Processing & Management" tab.
+
+![](images/maad_key_visual_blue.png){fig-align="left" width="626"}
 
 ### Environmental Data
 
-[SeascapeR](https://marinebon.org/mbonproduct/seascapes-for-sanctuaries/), a powerful tool developed by the Marine Biodiversity Observation Network (MBON), offers extensive capabilities for analyzing and visualizing marine habitat data. Leveraging SeascapeR, we are conducting comparative analyses between distinct water classes and acoustic indices, allowing us to explore the relationships between habitat characteristics and acoustic biodiversity across diverse marine environments with unparalleled depth and precision.
+[SeascapeR](https://marinebon.org/mbonproduct/seascapes-for-sanctuaries/), a powerful tool developed by the Marine Biodiversity Observation Network (MBON), offers extensive capabilities for analyzing and visualizing marine habitat data. Leveraging SeascapeR, we are conducting comparative analyses between distinct water classes and acoustic indices, allowing us to explore the relationships between habitat characteristics and potential acoustic biodiversity across diverse marine environments. Combinations of remotely sensed data variables at certain thresholds are used to characterize water bodies into one of 33 [Seascape Global Water Classes](https://shiny.marinebon.app/seascapes/classes.html).
 
 ![](images/seascapeR.png){width="629"}
 

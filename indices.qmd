@@ -16,13 +16,29 @@ Soundscape measurements refer to the quantitative analysis of the sounds present
 
 5.  **Integration with Biodiversity Indices**: Soundscape measurements can be integrated with traditional biodiversity indices to enhance their accuracy and comprehensiveness. By combining acoustic data with other ecological data, such as species abundance and habitat characteristics, researchers can develop more robust biodiversity assessments that capture the full spectrum of biodiversity within an ecosystem.
 
-![](images/Underwater_Acoustics.png){fig-align="left" width="475"}
+![](images/Underwater_Acoustics.png){fig-align="left" width="288"}
+
+------------------------------------------------------------------------
 
 ### Acoustic-based Biodiversity Indices
 
 For this exploratory study we use the package scikit-maad, a tool commonly used in the terrestrial community. [Scikit-maad](https://scikit-maad.github.io/#), short for "Machine learning for Acoustic Activity Detection," is a Python package designed for the analysis of acoustic data, particularly for bioacoustic applications. It provides a comprehensive set of tools and functions for processing, extracting features from, and analyzing soundscape recordings. Scikit-maad is primarily focused on facilitating the use of machine learning techniques for tasks such as acoustic event detection, species classification, and biodiversity monitoring.
 
 The developers of scikit-maad are a team of researchers and developers passionate about bioacoustics and computational ecology. They have expertise in signal processing, machine learning, and ecology, and their aim is to provide accessible and powerful tools for analyzing acoustic data and advancing research in the field of bioacoustics. The development of scikit-maad is supported by contributions from the open-source community and collaborations with researchers and practitioners in various domains related to acoustic ecology and biodiversity monitoring.
+
+In scikit-maad, the acoustic-based indices can be categorized into several main categories based on the aspects of the acoustic signal they capture:
+
+1.  **Temporal Indices**: These indices focus on the temporal characteristics of the acoustic signal, such as event duration, inter-event intervals, and event rate.
+
+2.  **Spectral Indices**: These indices analyze the frequency content of the acoustic signal, including measures such as spectral flux, spectral centroid, and mel-frequency cepstral coefficients (MFCC).
+
+3.  **Spectro-Temporal Indices**: These indices combine both temporal and spectral features, capturing information about the dynamics and variability of the acoustic signal over time and across different frequency bands.
+
+4.  **Alpha Acoustic Indices**: These indices are derived from ecological concepts and are specifically designed to quantify aspects of biodiversity or acoustic activity within a given environment. Examples include the Acoustic Diversity Index (ADI), Acoustic Complexity Index (ACI), and Acoustic Richness Index (ARI).
+
+------------------------------------------------------------------------
+
+### Index Definitions
 
 Below is a summary of the available spectro-temporal features, alpha acoustic indices, temporal features, and spectral features in scikit-maad:
 
