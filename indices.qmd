@@ -26,82 +26,587 @@ The developers of scikit-maad are a team of researchers and developers passionat
 
 Below is a summary of the available spectro-temporal features, alpha acoustic indices, temporal features, and spectral features in scikit-maad:
 
-**Spectro-Temporal Features**:
+**ACI (Acoustic Complexity Index)**
 
-1.  **Spectral Band Envelope Statistics**:
+-   **Description**: Quantifies the complexity of sound by evaluating the variation in amplitude among frequency bands.
 
-    -   Description: Statistics (mean, variance, skewness, kurtosis) of the spectral envelope within predefined frequency bands.
+-   **Formula**: ![](images/clipboard-3178511736.png){width="287"}
 
-2.  **Spectral Flux**:
+**ADI (Acoustic Diversity Index)**
 
-    -   Description: Measures the rate of change in spectral energy over time, indicating the dynamics of spectral content.
+-   **Description**: Measures the variety of sound frequencies present, indicative of biodiversity.
 
-3.  **Spectral Flatness**:
+-   **Formula**: ![](images/clipboard-3670162486.png){width="439"}frequency bin.
 
-    -   Description: Quantifies the flatness or tonality of a spectrum, indicating the balance between noise-like and tonal components.
+**AEI (Acoustic Evenness Index)**
 
-4.  **Spectral Kurtosis**:
+-   **Description**: Evaluates the evenness of the distribution of sound energy across frequencies.
 
-    -   Description: Measures the peakedness or sharpness of spectral peaks, providing information about the distribution of energy across frequencies.
+-   **Formula**: Similar to ecological evenness indices, calculated as AEI=![](images/clipboard-224518301.png){width="200"}
 
-5.  **Spectral Roll-off**:
+**ACTspCount (Active Space Count)**
 
-    -   Description: Frequency below which a certain percentage (e.g., 95%) of the total spectral energy is contained, indicating the spectral cutoff frequency.
+-   **Description**: Count of spatial areas showing significant sound activity.
 
-**Alpha Acoustic Indices**:
+-   **Formula**: Counting areas where sound exceeds a certain spatial or acoustic threshold.
 
-1.  **Acoustic Complexity Index (ACI)**:
+**ACTspFract (Active Space Fraction)**
 
-    -   Description: Measures the complexity of the acoustic environment by analyzing temporal patterns and variability of sound energy across frequency bands.
+-   **Description**: Fraction of the spatial domain showing active sound production.
 
-2.  **Acoustic Diversity Index (ADI)**:
+-   **Formula**: ![](images/clipboard-184378821.png){width="304"}
 
-    -   Description: Measures the diversity of acoustic events within a recording, considering both richness and evenness of acoustic activity.
+**ACTspMean (Active Space Mean)**
 
-3.  **Acoustic Evenness Index (AEI)**:
+-   **Description**: Average level of sound activity across spatial areas.
 
-    -   Description: Evaluates the evenness of acoustic activity distribution within a recording, indicating the balance among different types of events.
+-   **Formula**: ![](images/clipboard-3492482506.png){width="405" height="38"}
 
-4.  **Acoustic Presence Index (API)**:
+**ACTtCount (Active Time Count)**
 
-    -   Description: Indicates the presence or absence of acoustic events within a recording, providing a binary measure of activity.
+-   **Description**: Number of times the sound level exceeds the predefined threshold.
 
-5.  **Acoustic Rarity Index (ARI)**:
+-   **Formula**: Counting the number of active frames.
 
-    -   Description: Measures the rarity of acoustic events within a recording, considering the frequency and distribution of occurrence.
+**ACTtFraction (Active Time Fraction)**
 
-**Temporal Features**:
+-   **Description**: Proportion of the recording duration where the sound level exceeds a predefined threshold.
 
-1.  **Inter-Event Intervals (IEI)**:
+-   **Formula**: ![](images/clipboard-537697800.png){width="271"}
 
-    -   Description: Measures the time intervals between successive acoustic events, providing insights into event timing and rhythm.
+**ACTtMean (Active Time Mean)**
 
-2.  **Sound Event Duration (SED)**:
+-   **Description**: Average sound level during active times.
 
-    -   Description: Duration of individual sound events, indicating their temporal extent and persistence.
+-   **Formula**: ![](images/clipboard-1754306291.png){width="416"}
 
-3.  **Sound Event Rate (SER)**:
+**AGI (Acoustic Gap Index)**
 
-    -   Description: Rate of occurrence of sound events over time, providing a measure of activity intensity.
+-   **Description**: Index measuring the gaps or silent intervals within the acoustic signal, indicative of disturbance.
 
-4.  **Temporal Envelope Statistics**:
+-   **Formula**: ![](images/clipboard-4223693148.png){width="230"}
 
-    -   Description: Statistics (mean, variance, skewness, kurtosis) of the temporal envelope of sound signals.
+**AnthroEnergy (Anthropogenic Energy)**
 
-**Spectral Features**:
+-   **Description**: Measure of energy associated with human-made sounds.
 
-1.  **Band Energy Ratios (BER)**:
+-   **Formula**: Sum of energy in designated anthropogenic frequency bands.
 
-    -   Description: Ratios of energy within different frequency bands, providing insights into spectral energy distribution.
+**BGNf (Background Noise Level Frequency)**
 
-2.  **Frequency Modulation (FM)**:
+-   **Description**: Background noise level in the frequency domain.
 
-    -   Description: Measures the rate of change in frequency over time, indicating the presence of frequency modulation in signals.
+-   **Formula**: Typically estimated during periods of minimal activity; specifics can vary.
 
-3.  **Mel-Frequency Cepstral Coefficients (MFCC)**:
+**BGNt (Background Noise Level Time)**
 
-    -   Description: Coefficients derived from the mel-frequency cepstrum of a signal, capturing spectral characteristics important for speech and audio processing.
+-   **Description**: Level of background noise in the time domain.
 
-4.  **Spectral Centroid**:
+-   **Formula**: Typically estimated during periods of minimal activity; specifics can vary.
 
-    -   Description: Center of mass of the power spectrum, indicating the "brightness" or average frequency of a signal.
+**BI (Biotic Index)**
+
+-   **Description**: Index evaluating the presence of biological sounds.
+
+-   **Formula**: Calculated as a function of specific frequency and time thresholds indicative of biological activity.
+
+**BioEnergy (Biophonic Energy)**
+
+-   **Description**: Measure of energy associated with natural sounds.
+
+-   **Formula**: Sum of energy in designated biophonic frequency bands.
+
+**EAS (Energy Acoustic Spectrum)**
+
+-   **Description**: Total acoustic energy measured across the spectrum.
+
+-   **Formula**: ![](images/clipboard-3224557143.png){width="192"}
+
+**ECU (Evenness of the Channel Utilization)**
+
+-   **Description**: Evenness with which different frequency channels are utilized.
+
+-   **Formula**: ![](images/clipboard-3100385703.png){width="267"}
+
+**ECV (Energy Coefficient of Variation)**
+
+-   **Description**: Coefficient of variation of the energy across different frequency bands.
+
+-   **Formula**: ![](images/clipboard-1523706811.png){width="153"}​​
+
+**ENRf (Energy Ratio Frequency)**
+
+-   **Description**: Ratio of energy within certain frequency bands compared to the total energy.
+
+-   **Formula**: ![](images/clipboard-1730251621.png){width="233"}
+
+**EPS (Energy Peak Spectrum)**
+
+-   **Description**: Measure of the peak energy in the spectrum.
+
+-   **Formula**: ![](images/clipboard-539386795.png){width="220"}
+
+**EPS_KURT (Energy Peak Spectrum Kurtosis)**
+
+-   **Description**: Kurtosis of the energy peak spectrum, indicating the shape of the peak distribution.
+
+-   **Formula**: Calculation of kurtosis applied to the distribution of peak energies.
+
+**EPS_SKEW (Energy Peak Spectrum Skewness)**
+
+-   **Description**: Skewness of the energy peak spectrum, indicating the asymmetry of the peak distribution.
+
+-   **Formula**: Calculation of skewness applied to the distribution of peak energies.
+
+**EVNspCount (Event Space Count)**
+
+-   **Description**: Count of sound events in spatial areas.
+
+-   **Formula**: Counting distinct sound events in spatial regions.
+
+**EVNspFract (Event Space Fraction)**
+
+-   **Description**: Fraction of the spatial domain where sound events occur.
+
+-   **Formula**: ![](images/clipboard-1013212438.png){width="337"}
+
+**EVNspMean (Event Space Mean)**
+
+-   **Description**: Average level of sound events across spatial areas.
+
+-   **Formula**: ![](images/clipboard-1164138196.png){width="491"}
+
+**EVNtCount (Event Time Count)**
+
+-   **Description**: Number of distinct sound events detected.
+
+-   **Formula**: Counting distinct events based on a defined threshold.
+
+**EVNtFraction (Event Time Fraction)**
+
+-   **Description**: Fraction of time that 'events' (heightened sound activity) occur.
+
+-   **Formula**: ![](images/clipboard-3332730601.png){width="296"}
+
+**EVNtMean (Event Time Mean)**
+
+-   **Description**: Average sound level during event times.
+
+-   **Formula**: ![](images/clipboard-3284712092.png){width="406"}
+
+**Hf (High Frequency Coverage)**
+
+-   **Description**: Extent to which high frequencies are present in the soundscape.
+
+-   **Formula**: ![](images/clipboard-2523022695.png){width="341"}
+
+**HFC (High Frequency Coverage)**
+
+-   **Description**: Reiterates the presence and extent of high frequencies in the soundscape.
+
+-   **Formula**: ![](images/clipboard-1761188340.png){width="316"}
+
+**H_GiniSimpson (Gini-Simpson Entropy)**
+
+-   **Description**: Entropy based on the Gini-Simpson index, reflecting diversity and probability.
+
+-   **Formula**: ![](images/clipboard-961694826.png)
+
+**H_Havrda (Havrda Entropy)**
+
+-   **Description**: Entropy measure based on Havrda-Charvat entropy, reflecting diversity.
+
+-   **Formula**: ![](images/clipboard-605951696.png)
+
+**H_pairedShannon (Paired Shannon Entropy)**
+
+-   **Description**: Shannon entropy calculated from paired data sets for comparing diversity.
+
+-   **Formula**: ![](images/clipboard-1644268972.png)
+
+**H_Renyi (Renyi Entropy)**
+
+-   **Description**: Generalized entropy measure capturing diversity and richness of the soundscape.
+
+-   **Formula**: ![](images/clipboard-1152059287.png)
+
+**H_gamma (Gamma Entropy)**
+
+-   **Description**: Entropy measure based on the gamma distribution, used for sound diversity.
+
+-   **Formula**: Specific calculation details can vary, often involving the use of the gamma function in entropy calculations.
+
+**KURTf (Kurtosis Frequency)**
+
+-   **Description**: 'Tailedness' of the frequency distribution, indicating infrequent extreme frequency deviations.
+
+-   **Formula**: ![](images/clipboard-126612138.png){width="314"}
+
+**KURTt (Kurtosis Time)**
+
+-   **Description**: 'Tailedness' of the amplitude distribution in the time domain, indicating infrequent extreme deviations.
+
+-   **Formula**: ![](images/clipboard-3987843613.png){width="323"}
+
+**LFC (Low Frequency Coverage)**
+
+-   **Description**: Extent to which low frequencies are present in the soundscape.
+
+-   **Formula**: ![](images/clipboard-3361057686.png){width="346"}
+
+**LEQf (Long-term Equivalent Level Frequency)**
+
+-   **Description**: Equivalent constant sound level in the frequency domain that conveys the same sound energy.
+
+-   **Formula**: ![](images/clipboard-2676081756.png){width="319"}
+
+**LEQt (Long-term Equivalent Level Time)**
+
+-   **Description**: Constant sound level that delivers the same sound energy as the varying sound level over a specified period.
+
+-   **Formula**: ![](images/clipboard-494037990.png){width="326"}
+
+**MFC (Mid Frequency Coverage)**
+
+-   **Description**: Extent to which mid-range frequencies are present in the soundscape.
+
+-   **Formula**: ![](images/clipboard-4213737357.png){width="303"}
+
+**MEANf (Mean Frequency)**
+
+-   **Description**: Average frequency of sounds, weighted by their amplitude.
+
+-   **Formula**: ![](images/clipboard-2415357253.png){width="194"}
+
+**MEANt (Mean Time)**
+
+-   **Description**: The average amplitude of the audio signal over time, reflecting the overall loudness.
+
+-   **Formula**: ![](images/clipboard-733360590.png){width="251"}
+
+**NBPEAKS (Number of Peaks)**
+
+-   **Description**: Total number of prominent peaks in the frequency spectrum.
+
+-   **Formula**: Count of frequency peaks exceeding a certain amplitude threshold.
+
+**NDSI (Normalized Difference Soundscape Index)**
+
+-   **Description**: Index of the balance between biological sounds and anthropogenic noise.
+
+-   **Formula**: ![](images/clipboard-3621976947.png){width="139"}
+
+**RAOQ (Rao's Quadratic Entropy)**
+
+-   **Description**: Entropy measure that considers both abundance and dissimilarity among categories.
+
+-   **Formula**: ![](images/clipboard-575858343.png){width="280"}​
+
+**rBA (Relative Biophony-Anthrophony)**
+
+-   **Description**: Relative levels of biophony (natural sounds) and anthrophony (human-made sounds).
+
+-   **Formula**: Similar to NDSI, calculated for different contexts or specific frequency bands.
+
+**ROIcover (Region of Interest Coverage)**
+
+-   **Description**: Extent to which regions of interest cover the acoustic space.
+
+-   **Formula**: ![](images/clipboard-1902297317.png){width="275"}​
+
+**ROItotal (Region of Interest Total)**
+
+-   **Description**: Total measure or count of regions of interest identified within the soundscape.
+
+-   **Formula**: Counting the total number of identified acoustic regions of interest.
+
+**ROU (Roughness)**
+
+-   **Description**: Measure of the texture or roughness of the sound profile.
+
+-   **Formula**: Typically involves calculating modulation of sound amplitude or frequency over time.
+
+**SKEWf (Skewness Frequency)**
+
+-   **Description**: Asymmetry of the frequency distribution of the sound.
+
+-   **Formula**: ![](images/clipboard-2731961336.png){width="319"}
+
+**SKEWt (Skewness Time)**
+
+-   **Description**: Asymmetry of the amplitude distribution of the audio signal in the time domain.
+
+-   **Formula**: ![](images/clipboard-2056538908.png)
+
+**SNRf (Signal-to-Noise Ratio Frequency)**
+
+-   **Description**: Ratio of signal level to noise level in the frequency domain.
+
+-   **Formula**: ![](images/clipboard-1762060253.png){width="338"}
+
+**SNRt (Signal-to-Noise Ratio Time)**
+
+-   **Description**: Ratio of the audio signal level to the level of background noise.
+
+-   **Formula**: ![](images/clipboard-3194904740.png){width="253"}
+
+**TFSD (Temporal Frequency Spectral Diversity)**
+
+-   **Description**: Diversity of frequencies over time, reflecting temporal variation.
+
+-   **Formula**: Often calculated using indices similar to biodiversity indices but applied to the temporal frequency spectrum.
+
+**VARf (Variance Frequency)**
+
+-   **Description**: Variance in the frequency of sounds, indicating dispersion around the mean frequency.
+
+-   **Formula**: ![](images/clipboard-2364587936.png){width="236"}
+
+**VARt (Variance Time)**
+
+-   **Description**: Variance of the time-domain audio signal amplitude, indicating amplitude fluctuations over time.
+
+-   **Formula**: ![](images/clipboard-725325231.png){width="265"}
+
+**ZCR (Zero Crossing Rate)**
+
+-   **Description**: Measures the rate at which the signal changes from positive to negative or back, indicating the frequency content of the sound.
+
+-   **Formula**: ![](images/clipboard-4119730632.png){width="335"}
+
+------------------------------------------------------------------------
+
+### Frequency Bands, Thresholds & Masks
+
+#### *Indices Measuring Biophony vs. Anthrophony*
+
+1.  **NDSI (Normalized Difference Soundscape Index)**
+
+    -   **Description**: Quantifies the balance between biophonic and anthrophonic sound sources within a soundscape. It is often used as a metric for assessing environmental health and biodiversity.
+
+    -   **Formula**: ![](images/clipboard-778764244.png)
+
+        -   B: Biophony energy within defined frequency bands.
+
+        -   A: Anthrophony energy within defined frequency bands.
+
+    -   **Frequency Limits**:
+
+        -   **Biophony**: Typically low to mid frequencies (e.g., 0-1000 Hz).
+
+        -   **Anthrophony**: Typically higher frequencies (e.g., 1000-4000 Hz).
+
+2.  **BioEnergy (Biophonic Energy)**
+
+    -   **Description**: Measures the total acoustic energy attributed to natural sound sources within the defined biophonic frequency range.
+
+    -   **Calculation**: Sum of the acoustic energy in the biophonic frequency bands.
+
+    -   **Frequency Limits**:
+
+        -   **Biophony**: Typically low frequencies (e.g., 0-1000 Hz).
+
+3.  **AnthroEnergy (Anthropogenic Energy)**
+
+    -   **Description**: Measures the total acoustic energy attributed to human-made sound sources within the defined anthrophonic frequency range.
+
+    -   **Calculation**: Sum of the acoustic energy in the anthrophonic frequency bands.
+
+    -   **Frequency Limits**:
+
+        -   **Anthrophony**: Typically higher frequencies (e.g., 1000-4000 Hz).
+
+4.  **rBA (Relative Biophony-Anthrophony)**
+
+    -   **Description**: Compares the relative levels of biophonic and anthrophonic energy within the soundscape.
+
+    -   **Calculation**: A ratio or comparison metric between the biophonic and anthrophonic energies.
+
+    -   **Frequency Limits**:
+
+        -   **Biophony**: Typically low frequencies (e.g., 0-1000 Hz).
+
+        -   **Anthrophony**: Typically higher frequencies (e.g., 1000-4000 Hz).
+
+In addition to the indices that explicitly measure biophony and anthrophony (like NDSI, BioEnergy, AnthroEnergy, and rBA), there are other indices in the `scikit-maad` library that utilize these frequency limits (`flim_low` and `flim_mid`) for their calculations. Here are some additional indices that rely on these frequency bands:
+
+1.  **BI (Biotic Index)**
+
+    -   **Description**: Measures the presence and intensity of biotic sounds within the biophonic frequency range.
+
+    -   **Frequency Limits**:
+
+        -   **Biophony**: Typically low frequencies (e.g., 0-1000 Hz).
+
+2.  **ACI (Acoustic Complexity Index)**
+
+    -   **Description**: Quantifies the complexity of the soundscape by evaluating the variation in amplitude among frequency bands over time.
+
+    -   **Frequency Limits**: The index can be applied to specific frequency bands, often including the biophonic and anthrophonic ranges.
+
+        -   **Biophony**: 0-1000 Hz.
+
+        -   **Anthrophony**: 1000-4000 Hz.
+
+3.  **EPS (Energy Peak Spectrum)**
+
+    -   **Description**: Measures the peak energy in the spectrum within specified frequency bands.
+
+    -   **Frequency Limits**: Can be calculated separately for biophony and anthrophony bands.
+
+        -   **Biophony**: 0-1000 Hz.
+
+        -   **Anthrophony**: 1000-4000 Hz.
+
+4.  **ROU (Roughness)**
+
+    -   **Description**: Evaluates the texture or roughness of the sound profile, which can be calculated for different frequency bands.
+
+    -   **Frequency Limits**:
+
+        -   **Biophony**: 0-1000 Hz.
+
+        -   **Anthrophony**: 1000-4000 Hz.
+
+5.  **ADI (Acoustic Diversity Index)**
+
+    -   **Description**: Measures the variety of sound frequencies present, indicative of biodiversity.
+
+    -   **Frequency Limits**: Applied across biophony and anthrophony bands to assess diversity in each.
+
+        -   **Biophony**: 0-1000 Hz.
+
+        -   **Anthrophony**: 1000-4000 Hz.
+
+6.  **AEI (Acoustic Evenness Index)**
+
+    -   **Description**: Evaluates the evenness of the distribution of sound energy across frequencies, which can be applied to specific bands.
+
+    -   **Frequency Limits**:
+
+        -   **Biophony**: 0-1000 Hz.
+
+        -   **Anthrophony**: 1000-4000 Hz.
+
+#### *Frequency Band Details*
+
+The differentiation between biophony and anthrophony is critical for accurately interpreting these indices. Here's how these limits are typically set in the `scikit-maad` functions:
+
+-   **Biophony (Natural Sounds)**:
+
+    -   Frequency bands often range from **0 Hz to 1000 Hz**. This range captures most natural sounds such as bird calls, frog croaks, and other wildlife communications.
+
+-   **Anthrophony (Human-made Sounds)**:
+
+    -   Frequency bands often range from **1000 Hz to 4000 Hz**. This range includes many anthropogenic noises like machinery, vehicles, and urban sounds.
+
+**Example Code for Frequency Limits in `scikit-maad`**
+
+Here's how these frequency limits are typically applied in the `scikit-maad` functions:
+
+```{python}}
+spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
+    Sxx_power=Sxx_power,
+    tn=tn,
+    fn=fn,
+    flim_low=[0, 1000],    # Frequency band for biophony
+    flim_mid=[1000, 4000], # Frequency band for anthrophony
+    flim_hi=[4000, 8000],  # Higher frequencies if needed
+    gain=G,
+    sensitivity=S,
+    verbose=False,
+    R_compatible='soundecology',
+    mask_param1=6, 
+    mask_param2=0.5,
+    display=False
+)
+
+```
+
+#### Thresholds and Masks in `scikit-maad`
+
+1.  **dB_threshold**
+
+    **Description**: This threshold is used to determine active segments in the audio signal. It sets the minimum amplitude level that must be exceeded for a segment to be considered active.
+
+    -   **Use Case**: Applied in the calculation of temporal indices like `ACTtCount`, `ACTtFraction`, and other active time metrics.
+
+    -   **Parameters**:
+
+        -   **dB_threshold**: 3 dB \# Minimum amplitude level for active segments
+
+    -   **Example in Code**
+
+```{python}}
+temporal_indices = features.all_temporal_alpha_indices(
+    s=segment_wave,
+    fs=fs,
+    gain=G,
+    sensibility=S,
+    dB_threshold=3,  # This is the threshold defined in decibels
+    rejectDuration=0.01,
+    verbose=False,
+    display=False
+)
+
+```
+
+2.  **mask_param1**
+
+    **Description**: This parameter is typically used as a threshold in decimbels for masking low-energy components in the spectrogram. Any part of the spectrogram with energy below this threshold might be set to zero or ignored in further calculations.
+
+    -   **Use Case**: Used in spectral analysis to filter out noise and irrelevant low-energy componenets.
+
+    -   **Parameters**: **mask_param1**: 6 dB \# Threshold for masking low-energy components in the spectrogram
+
+    -   **Example in Code:**
+
+        ```{python}}
+        spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
+            Sxx_power=Sxx_power,
+            tn=tn,
+            fn=fn,
+            flim_low=[0, 1000],
+            flim_mid=[1000, 4000],
+            flim_hi=[4000, 8000],
+            gain=G,
+            sensitivity=S,
+            verbose=False,
+            R_compatible='soundecology',
+            mask_param1=6,  # This is the threshold for masking in decibels
+            mask_param2=0.5,
+            display=False
+        )
+
+        ```
+
+3.  **mask_param2**
+
+    **Description**: This parameter might determine the sensitivity or proportion of the masking process, influencing how aggressively the mask is applied.
+
+    -   **Use Case**: Used alongside `mask_param1` to refine the masking process in spectral analysis.
+
+    -   **Parameters**: **mask_param2**: 0.5 \# Sensitivity or proportion parameter for the masking process
+
+**Example code**
+
+```{python}}
+spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
+    Sxx_power=Sxx_power,
+    tn=tn,
+    fn=fn,
+    flim_low=[0, 1000],
+    flim_mid=[1000, 4000],
+    flim_hi=[4000, 8000],
+    gain=G,
+    sensitivity=S,
+    verbose=False,
+    R_compatible='soundecology',
+    mask_param1=6,
+    mask_param2=0.5,  # This is the sensitivity parameter for the mask
+    display=False
+)
+
+```
+
+These parameters affect a suite of indices, and so users should consider the intended spectral components they are interested in exploring.
