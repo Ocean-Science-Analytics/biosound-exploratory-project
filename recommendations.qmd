@@ -1,3 +1,15 @@
 ---
-title: "recommendations"
+title: "Future Recommendations"
 ---
+
+**Existing Exploratory Dataset**
+
+Enter
+
+**Additional Data Processing**
+
+Enter
+
+**Dashboard Recommendations**
+
+Enter

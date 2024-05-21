@@ -1,3 +1,15 @@
 ---
 title: "Evaluating Indices"
 ---
+
+### Diel Relationships
+
+TBD
+
+### Indices vs. Annotations
+
+TBD
+
+### Relationship with Environmental Data
+
+TBD
