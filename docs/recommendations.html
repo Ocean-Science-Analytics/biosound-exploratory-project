@@ -176,32 +176,38 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="existing-exploratory-dataset"><strong>Existing Exploratory Dataset</strong></h3>
 <section id="challenges" class="level4">
 <h4 class="anchored" data-anchor-id="challenges"><strong><em>Challenges</em></strong></h4>
-<p>Despite the progress made in this exploratory study, clearer insights into</p>
+<p>The compilation of multiple datasets with varied duty cycle, sampling rates, naming conventions, and file duration posed several challenges that should be considered for future efforts.</p>
 <ol type="1">
-<li><p>Further exploring data:</p></li>
-<li><p>Biophony Annotations: to the degree</p></li>
-<li></li>
+<li><p><strong>File-naming Convention</strong>: Most entities have a custom file name that was used for generating audio files. The scikit-maad code required specific formats for writing date and time into the csv data products. This required custom code for each dataset.</p></li>
+<li><p><strong>Decimating &amp; Splitting</strong>: Processing locally with a month of data at a time had limitations in terms of the volume of indices that were collected in this study. Audio files longer than 5 minutes require segmentation to allow for processing (crashing resulted with 25-minute and 5-hour files). Additionally, the continuous data at 5-minute intervals was unrealistic to process at very small duration scales (e.g., 10 and 30 seconds).</p></li>
+<li><p><strong>Annotation Resolution</strong>: While the Key West and May River datasets provided annotations at a higher resolution, the SanctSound-HI01 and Gray’s Reef sanctuary annotations of biophony were too coarse a resolution to use for meaningful</p></li>
+<li><p><strong>Processing Times</strong>: Local processing was used for this effort which is required long duration, high computing effort for multiple runs.</p></li>
 </ol>
 </section>
 <section id="recommendations" class="level4">
 <h4 class="anchored" data-anchor-id="recommendations"><strong><em>Recommendations</em></strong></h4>
-<p>Enter</p>
+<p>Despite the progress made in this exploratory study, clearer insights into the factors influencing acoustic-based indices is required.</p>
+<ol type="1">
+<li><p>Finalize list of visualizations and comparisons including incorporating a panel on comparison of audio durations for each site and a vessel versus non-vessel comparison of indices.</p></li>
+<li><p>The data provided should be reviewed and assessed for notable trends within the data that are either specific to each site or common across sites. These trends should then be further examined through statistical comparisons.</p></li>
+<li><p><strong>Biophony Annotations</strong>: Biological contributions to the data are likely of great importance for better understanding and elucidating any possible trends in the data. For instance, the Chuckchi Sea dataset has extensive vocal activity, presumably from bearded seals, and the OOI and ONC data have limited biological activity from a cursory review. Annotation to the level of detail that is found in the Key West dataset would allow for compilation of volume of acoustic activity by species, which could be informative in this study.</p></li>
+</ol>
 </section>
 </section>
 <section id="scaling-to-larger-datasets" class="level3">
 <h3 class="anchored" data-anchor-id="scaling-to-larger-datasets">Scaling to Larger Datasets</h3>
 <section id="challenges-1" class="level4">
 <h4 class="anchored" data-anchor-id="challenges-1"><strong><em>Challenges</em></strong></h4>
-<p>ADD</p>
+<p>This exploratory study revealed several challenges that are anticipating for scaling this to a larger dataset.</p>
 <ol type="1">
-<li><p>TBD</p></li>
-<li><p>TBD</p></li>
-<li></li>
+<li><p>File Management: File management is a necessary step but not one that can be required of data collectors. File renaming, segmentation and decimation are all likely necessary to further explore acoustic indices with larger datasets.</p></li>
+<li><p>Annotations: Processing data to understand the biophony and anthrophony within the datasets is a likely necessary step. A high resolution in annotations is seemingly necessary for this effort.</p></li>
+<li><p>Processing is limited in local environments, and requires high computational intensive equipment.</p></li>
 </ol>
 </section>
 <section id="recommendations-1" class="level4">
 <h4 class="anchored" data-anchor-id="recommendations-1"><strong><em>Recommendations</em></strong></h4>
-<p>Enter</p>
+<p>We highly recommend navigating this project to a cloud-based scenario, and directly querying data from data collector repositories. This would require cloud engineer design for the data query, stepping through file management and pre-processing, compiling and visualizing/analyzing data in a dashboard. We recommend an Amazon Warehouse Services (AWS) approach in the future.</p>
 
 
 </section>

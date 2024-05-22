@@ -6,30 +6,38 @@ title: "Challenges & Future Recommendations"
 
 #### ***Challenges***
 
-Despite the progress made in this exploratory study, clearer insights into
+The compilation of multiple datasets with varied duty cycle, sampling rates, naming conventions, and file duration posed several challenges that should be considered for future efforts.
 
-1.  Further exploring data:
+1.  **File-naming Convention**: Most entities have a custom file name that was used for generating audio files. The scikit-maad code required specific formats for writing date and time into the csv data products. This required custom code for each dataset.
 
-2.  Biophony Annotations: to the degree
+2.  **Decimating & Splitting**: Processing locally with a month of data at a time had limitations in terms of the volume of indices that were collected in this study. Audio files longer than 5 minutes require segmentation to allow for processing (crashing resulted with 25-minute and 5-hour files). Additionally, the continuous data at 5-minute intervals was unrealistic to process at very small duration scales (e.g., 10 and 30 seconds).
 
-3.  
+3.  **Annotation Resolution**: While the Key West and May River datasets provided annotations at a higher resolution, the SanctSound-HI01 and Gray's Reef sanctuary annotations of biophony were too coarse a resolution to use for meaningful
+
+4.  **Processing Times**: Local processing was used for this effort which is required long duration, high computing effort for multiple runs.
 
 #### ***Recommendations***
 
-Enter
+Despite the progress made in this exploratory study, clearer insights into the factors influencing acoustic-based indices is required.
+
+1.  Finalize list of visualizations and comparisons including incorporating a panel on comparison of audio durations for each site and a vessel versus non-vessel comparison of indices.
+
+2.  The data provided should be reviewed and assessed for notable trends within the data that are either specific to each site or common across sites. These trends should then be further examined through statistical comparisons.
+
+3.  **Biophony Annotations**: Biological contributions to the data are likely of great importance for better understanding and elucidating any possible trends in the data. For instance, the Chuckchi Sea dataset has extensive vocal activity, presumably from bearded seals, and the OOI and ONC data have limited biological activity from a cursory review. Annotation to the level of detail that is found in the Key West dataset would allow for compilation of volume of acoustic activity by species, which could be informative in this study.
 
 ### Scaling to Larger Datasets
 
 #### ***Challenges***
 
-ADD
+This exploratory study revealed several challenges that are anticipating for scaling this to a larger dataset.
 
-1.  TBD
+1.  File Management: File management is a necessary step but not one that can be required of data collectors. File renaming, segmentation and decimation are all likely necessary to further explore acoustic indices with larger datasets.
 
-2.  TBD
+2.  Annotations: Processing data to understand the biophony and anthrophony within the datasets is a likely necessary step. A high resolution in annotations is seemingly necessary for this effort.
 
-3.  
+3.  Processing is limited in local environments, and requires high computational intensive equipment.
 
 #### ***Recommendations***
 
-Enter
+We highly recommend navigating this project to a cloud-based scenario, and directly querying data from data collector repositories. This would require cloud engineer design for the data query, stepping through file management and pre-processing, compiling and visualizing/analyzing data in a dashboard. We recommend an Amazon Warehouse Services (AWS) approach in the future.
