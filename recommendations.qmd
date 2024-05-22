@@ -4,7 +4,7 @@ title: "Challenges & Future Recommendations"
 
 ### **Existing Exploratory Dataset**
 
-#### *Challenges*
+#### ***Challenges***
 
 Despite the progress made in this exploratory study, clearer insights into
 
@@ -18,9 +18,9 @@ Despite the progress made in this exploratory study, clearer insights into
 
 Enter
 
-### Scaling to Larger Datasets 
+### Scaling to Larger Datasets
 
-#### *Challenges*
+#### ***Challenges***
 
 ADD
 
