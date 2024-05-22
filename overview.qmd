@@ -25,16 +25,16 @@ The datasets utilized in this study originate from diverse environments, includi
 
 ![](images/BioSound_Sites.png){fig-align="center"}
 
-|      Dataset Name      |             Source             |          Contact           | Marine Ecosystem Type  | Native Sampling Rate (kHz) |          Duty Cycle           | Native File Duration | Selected Months |
-|:-----------:|:-------------:|:----------:|:-----------:|:--------:|:---------:|:--------:|:----------:|
-|      Caesar Creek      |      University of Miami       |        Abby Tinari         |        Mangrove        |             32             |    10 seconds every minute    |       0:00:10        | Feb - Mar, 2019 |
-|      Chuckchi Sea      |     Oregon Sate University     |       Kate Stafford        |        Offshore        |           16.384           |     25 minutes every hour     |       0:25:00        | Jan - Mar, 2019 |
-|   Gray's Reef (GR01)   |        NEFSC-SanctSound        |         Tim Rowell         |        Offshore        |             48             |          Continuous           |       5:40:00        | Jan - Feb, 2019 |
-| Key West (WDR_Grouper) |    Florida Fish & Wildlife     |       Jessica Keller       |       Coral Reef       |             48             | 30 seconds every five minutes |       0:00:30        | Feb - Mar, 2020 |
-|       May River        | U. of South Carolina, Beaufort | Alyssa Marian/ Eric Montie |        Estuary         |             80             |     2 minutes every hour      |       0:02:00        | Jan - Mar, 2019 |
-|  ONC (MEF Hydrophone)  |     Ocean Networks Canada      |        Jasper Kanes        |        Offshore        |             64             |          Continuous           |       0:05:00        | Jan - Feb, 2019 |
-|    OOI (HYDBBA 106)    | Ocean Observatories Initiative |        Liz Ferguson        |         Shelf          |             64             |          Continuous           |       0:05:00        | Jan - Feb, 2019 |
-|   SanctSound (HI01)    | Hawaiian Islands Humpback NMS  |         Eden Zang          |        Island/         |             48             |          Continuous           |       5:40:00        | Jan - Feb, 2019 |
+|      Dataset Name      |             Source             |          Contact           | Marine Ecosystem Type | Native Sampling Rate (kHz) |          Duty Cycle           | Native File Duration | Selected Months |
+|:----------------------:|:------------------------------:|:--------------------------:|:---------------------:|:--------------------------:|:-----------------------------:|:--------------------:|:---------------:|
+|      Caesar Creek      |      University of Miami       |        Abby Tinari         |       Mangrove        |             32             |    10 seconds every minute    |       0:00:10        | Feb - Mar, 2019 |
+|      Chuckchi Sea      |     Oregon Sate University     |       Kate Stafford        |       Offshore        |           16.384           |     25 minutes every hour     |       0:25:00        | Jan - Mar, 2019 |
+|   Gray's Reef (GR01)   |        NEFSC-SanctSound        |         Tim Rowell         |       Offshore        |             48             |          Continuous           |       5:40:00        | Jan - Feb, 2019 |
+| Key West (WDR_Grouper) |    Florida Fish & Wildlife     |       Jessica Keller       |      Coral Reef       |             48             | 30 seconds every five minutes |       0:00:30        | Feb - Mar, 2020 |
+|       May River        | U. of South Carolina, Beaufort | Alyssa Marian/ Eric Montie |        Estuary        |             80             |     2 minutes every hour      |       0:02:00        | Jan - Mar, 2019 |
+|  ONC (MEF Hydrophone)  |     Ocean Networks Canada      |        Jasper Kanes        |       Offshore        |             64             |          Continuous           |       0:05:00        | Jan - Feb, 2019 |
+|    OOI (HYDBBA 106)    | Ocean Observatories Initiative |        Liz Ferguson        |         Shelf         |             64             |          Continuous           |       0:05:00        | Jan - Feb, 2019 |
+|   SanctSound (HI01)    | Hawaiian Islands Humpback NMS  |         Eden Zang          |        Island/        |             48             |          Continuous           |       5:40:00        | Jan - Feb, 2019 |
 
 ### Acoustic-based Indices
 

@@ -1,15 +1,35 @@
 ---
-title: "Future Recommendations"
+title: "Challenges & Future Recommendations"
 ---
 
-**Existing Exploratory Dataset**
+### **Existing Exploratory Dataset**
+
+#### *Challenges*
+
+Despite the progress made in this exploratory study, clearer insights into
+
+1.  Further exploring data:
+
+2.  Biophony Annotations: to the degree
+
+3.  
+
+#### ***Recommendations***
 
 Enter
 
-**Additional Data Processing**
+### Scaling to Larger Datasets 
 
-Enter
+#### *Challenges*
 
-**Dashboard Recommendations**
+ADD
+
+1.  TBD
+
+2.  TBD
+
+3.  
+
+#### ***Recommendations***
 
 Enter

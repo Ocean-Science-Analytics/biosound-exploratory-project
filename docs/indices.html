@@ -619,38 +619,24 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Example Code for Frequency Limits in <code>scikit-maad</code></strong></p>
 <p>Here’s how these frequency limits are typically applied in the <code>scikit-maad</code> functions:</p>
-<pre class="{python}}"><code>spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
-    Sxx_power=Sxx_power,
-    tn=tn,
-    fn=fn,
-    flim_low=[0, 1000],    # Frequency band for biophony
-    flim_mid=[1000, 4000], # Frequency band for anthrophony
-    flim_hi=[4000, 8000],  # Higher frequencies if needed
-    gain=G,
-    sensitivity=S,
-    verbose=False,
-    R_compatible='soundecology',
-    mask_param1=6, 
-    mask_param2=0.5,
-    display=False
-)
-</code></pre>
-</section>
-<section id="thresholds-and-masks-in-scikit-maad" class="level4">
-<h4 class="anchored" data-anchor-id="thresholds-and-masks-in-scikit-maad">Thresholds and Masks in <code>scikit-maad</code></h4>
-<ol type="1">
-<li><p><strong>dB_threshold</strong></p>
-<p><strong>Description</strong>: This threshold is used to determine active segments in the audio signal. It sets the minimum amplitude level that must be exceeded for a segment to be considered active.</p>
-<ul>
-<li><p><strong>Use Case</strong>: Applied in the calculation of temporal indices like <code>ACTtCount</code>, <code>ACTtFraction</code>, and other active time metrics.</p></li>
-<li><p><strong>Parameters</strong>:</p>
-<ul>
-<li><strong>dB_threshold</strong>: 3 dB # Minimum amplitude level for active segments</li>
-</ul></li>
-<li><p><strong>Example in Code</strong></p></li>
-</ul></li>
-</ol>
-<pre class="{python}}"><code>temporal_indices = features.all_temporal_alpha_indices(
+<p>```{python}} spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices( Sxx_power=Sxx_power, tn=tn, fn=fn, flim_low=[0, 1000], # Frequency band for biophony flim_mid=[1000, 4000], # Frequency band for anthrophony flim_hi=[4000, 8000], # Higher frequencies if needed gain=G, sensitivity=S, verbose=False, R_compatible=‘soundecology’, mask_param1=6, mask_param2=0.5, display=False )</p>
+<pre><code>
+#### Thresholds and Masks in `scikit-maad`
+
+1.  **dB_threshold**
+
+    **Description**: This threshold is used to determine active segments in the audio signal. It sets the minimum amplitude level that must be exceeded for a segment to be considered active.
+
+    -   **Use Case**: Applied in the calculation of temporal indices like `ACTtCount`, `ACTtFraction`, and other active time metrics.
+
+    -   **Parameters**:
+
+        -   **dB_threshold**: 3 dB \# Minimum amplitude level for active segments
+
+    -   **Example in Code**
+
+```{python}}
+temporal_indices = features.all_temporal_alpha_indices(
     s=segment_wave,
     fs=fs,
     gain=G,
@@ -659,8 +645,7 @@ ul.task-list li input[type="checkbox"] {
     rejectDuration=0.01,
     verbose=False,
     display=False
-)
-</code></pre>
+)</code></pre>
 <ol start="2" type="1">
 <li><p><strong>mask_param1</strong></p>
 <p><strong>Description</strong>: This parameter is typically used as a threshold in decimbels for masking low-energy components in the spectrogram. Any part of the spectrogram with energy below this threshold might be set to zero or ignored in further calculations.</p>
@@ -668,22 +653,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Use Case</strong>: Used in spectral analysis to filter out noise and irrelevant low-energy componenets.</p></li>
 <li><p><strong>Parameters</strong>: <strong>mask_param1</strong>: 6 dB # Threshold for masking low-energy components in the spectrogram</p></li>
 <li><p><strong>Example in Code:</strong></p>
-<pre class="{python}}"><code>spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
-    Sxx_power=Sxx_power,
-    tn=tn,
-    fn=fn,
-    flim_low=[0, 1000],
-    flim_mid=[1000, 4000],
-    flim_hi=[4000, 8000],
-    gain=G,
-    sensitivity=S,
-    verbose=False,
-    R_compatible='soundecology',
-    mask_param1=6,  # This is the threshold for masking in decibels
-    mask_param2=0.5,
-    display=False
-)
-</code></pre></li>
+<p>```{python}} spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices( Sxx_power=Sxx_power, tn=tn, fn=fn, flim_low=[0, 1000], flim_mid=[1000, 4000], flim_hi=[4000, 8000], gain=G, sensitivity=S, verbose=False, R_compatible=‘soundecology’, mask_param1=6, # This is the threshold for masking in decibels mask_param2=0.5, display=False )</p>
+<p>```</p></li>
 </ul></li>
 <li><p><strong>mask_param2</strong></p>
 <p><strong>Description</strong>: This parameter might determine the sensitivity or proportion of the masking process, influencing how aggressively the mask is applied.</p>
@@ -693,22 +664,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 <p><strong>Example code</strong></p>
-<pre class="{python}}"><code>spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
-    Sxx_power=Sxx_power,
-    tn=tn,
-    fn=fn,
-    flim_low=[0, 1000],
-    flim_mid=[1000, 4000],
-    flim_hi=[4000, 8000],
-    gain=G,
-    sensitivity=S,
-    verbose=False,
-    R_compatible='soundecology',
-    mask_param1=6,
-    mask_param2=0.5,  # This is the sensitivity parameter for the mask
-    display=False
-)
-</code></pre>
+<p>```{python}} spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices( Sxx_power=Sxx_power, tn=tn, fn=fn, flim_low=[0, 1000], flim_mid=[1000, 4000], flim_hi=[4000, 8000], gain=G, sensitivity=S, verbose=False, R_compatible=‘soundecology’, mask_param1=6, mask_param2=0.5, # This is the sensitivity parameter for the mask display=False )</p>
+<p>```</p>
 <p>These parameters affect a suite of indices, and so users should consider the intended spectral components they are interested in exploring.</p>
 
 

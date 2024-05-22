@@ -520,24 +520,9 @@ The differentiation between biophony and anthrophony is critical for accurately 
 
 Here's how these frequency limits are typically applied in the `scikit-maad` functions:
 
-```{python}}
-spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
-    Sxx_power=Sxx_power,
-    tn=tn,
-    fn=fn,
-    flim_low=[0, 1000],    # Frequency band for biophony
-    flim_mid=[1000, 4000], # Frequency band for anthrophony
-    flim_hi=[4000, 8000],  # Higher frequencies if needed
-    gain=G,
-    sensitivity=S,
-    verbose=False,
-    R_compatible='soundecology',
-    mask_param1=6, 
-    mask_param2=0.5,
-    display=False
-)
+\`\`\`{python}} spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices( Sxx_power=Sxx_power, tn=tn, fn=fn, flim_low=\[0, 1000\], \# Frequency band for biophony flim_mid=\[1000, 4000\], \# Frequency band for anthrophony flim_hi=\[4000, 8000\], \# Higher frequencies if needed gain=G, sensitivity=S, verbose=False, R_compatible='soundecology', mask_param1=6, mask_param2=0.5, display=False )
 
-```
+```         
 
 #### Thresholds and Masks in `scikit-maad`
 
@@ -564,7 +549,6 @@ temporal_indices = features.all_temporal_alpha_indices(
     verbose=False,
     display=False
 )
-
 ```
 
 2.  **mask_param1**
@@ -577,24 +561,9 @@ temporal_indices = features.all_temporal_alpha_indices(
 
     -   **Example in Code:**
 
-        ```{python}}
-        spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
-            Sxx_power=Sxx_power,
-            tn=tn,
-            fn=fn,
-            flim_low=[0, 1000],
-            flim_mid=[1000, 4000],
-            flim_hi=[4000, 8000],
-            gain=G,
-            sensitivity=S,
-            verbose=False,
-            R_compatible='soundecology',
-            mask_param1=6,  # This is the threshold for masking in decibels
-            mask_param2=0.5,
-            display=False
-        )
+        \`\`\`{python}} spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices( Sxx_power=Sxx_power, tn=tn, fn=fn, flim_low=\[0, 1000\], flim_mid=\[1000, 4000\], flim_hi=\[4000, 8000\], gain=G, sensitivity=S, verbose=False, R_compatible='soundecology', mask_param1=6, \# This is the threshold for masking in decibels mask_param2=0.5, display=False )
 
-        ```
+        \`\`\`
 
 3.  **mask_param2**
 
@@ -606,23 +575,8 @@ temporal_indices = features.all_temporal_alpha_indices(
 
 **Example code**
 
-```{python}}
-spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices(
-    Sxx_power=Sxx_power,
-    tn=tn,
-    fn=fn,
-    flim_low=[0, 1000],
-    flim_mid=[1000, 4000],
-    flim_hi=[4000, 8000],
-    gain=G,
-    sensitivity=S,
-    verbose=False,
-    R_compatible='soundecology',
-    mask_param1=6,
-    mask_param2=0.5,  # This is the sensitivity parameter for the mask
-    display=False
-)
+\`\`\`{python}} spectral_indices, spectral_indices_per_bin = features.all_spectral_alpha_indices( Sxx_power=Sxx_power, tn=tn, fn=fn, flim_low=\[0, 1000\], flim_mid=\[1000, 4000\], flim_hi=\[4000, 8000\], gain=G, sensitivity=S, verbose=False, R_compatible='soundecology', mask_param1=6, mask_param2=0.5, \# This is the sensitivity parameter for the mask display=False )
 
-```
+\`\`\`
 
 These parameters affect a suite of indices, and so users should consider the intended spectral components they are interested in exploring.
