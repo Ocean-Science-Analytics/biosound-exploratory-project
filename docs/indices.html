@@ -197,11 +197,42 @@ ul.task-list li input[type="checkbox"] {
 <p>The developers of scikit-maad are a team of researchers and developers passionate about bioacoustics and computational ecology. They have expertise in signal processing, machine learning, and ecology, and their aim is to provide accessible and powerful tools for analyzing acoustic data and advancing research in the field of bioacoustics. The development of scikit-maad is supported by contributions from the open-source community and collaborations with researchers and practitioners in various domains related to acoustic ecology and biodiversity monitoring.</p>
 <p>In scikit-maad, the acoustic-based indices can be categorized into several main categories based on the aspects of the acoustic signal they capture:</p>
 <ol type="1">
-<li><p><strong>Temporal Indices</strong>: These indices focus on the temporal characteristics of the acoustic signal, such as event duration, inter-event intervals, and event rate.</p></li>
-<li><p><strong>Spectral Indices</strong>: These indices analyze the frequency content of the acoustic signal, including measures such as spectral flux, spectral centroid, and mel-frequency cepstral coefficients (MFCC).</p></li>
-<li><p><strong>Spectro-Temporal Indices</strong>: These indices combine both temporal and spectral features, capturing information about the dynamics and variability of the acoustic signal over time and across different frequency bands.</p></li>
-<li><p><strong>Alpha Acoustic Indices</strong>: These indices are derived from ecological concepts and are specifically designed to quantify aspects of biodiversity or acoustic activity within a given environment. Examples include the Acoustic Diversity Index (ADI), Acoustic Complexity Index (ACI), and Acoustic Richness Index (ARI).</p></li>
+<li><p>Amplitude Indices:</p>
+<p><strong>Description</strong>: Indices that measure variations in amplitude.</p>
+<p><strong>Included Indices</strong>: BGNf, KURTt, LEQf, MEANf, SNRf, SNRt</p>
+<p><strong>Reason</strong>: These indices evaluate the intensity and variability of sound amplitudes, reflecting the loudness and dynamic range of the soundscape.</p></li>
+<li><p>Complexity Indices:</p>
+<p><strong>Description</strong>: Indices that measure the complexity of the soundscape, incorporating spectral, temporal and amplitude factors.</p>
+<p><strong>Included Indices</strong>: ACI, ACTspCount, ACTspFract, ACTspMean, AGI, EAS, ECU, ECV, ENRf, EVNspCount, EVNspFract, EVNspMean, RAOQ, ROIcover, ROItotal, ROU, ZCR</p>
+<p><strong>Reason</strong>: These indices assess the intricacy and richness of the soundscape, often related to the diversity and variability of sound sources.</p></li>
+<li><p>Diversity Indices:</p>
+<p><strong>Description</strong>: Indices that measure the diversity of sounds.</p>
+<p><strong>Included Indices</strong>: ADI, AEI, BI, BioEnergy, H_gamma, H_GiniSimpson, H_Havrda, H_pairedShannon, H_Renyi</p>
+<p><strong>Reason</strong>: These indices quantify the variety and abundance of different sounds, reflecting the ecological diversity and health of the environment.</p></li>
+<li><p>Spectral Indices:</p>
+<p><strong>Description</strong>: Indices that measure sound frequency characteristics.</p>
+<p><strong>Included Indices</strong>: AnthroEnergy, EPS, ESP_KURT, EPS_SKEW, Hf, HFC, KURTf, LFC, MFC, MED, NBPEAKS, NDSI, rBA, SKEWf, VARf</p>
+<p><strong>Reason:</strong> These indices analyze the frequency content of sounds, providing insights into the spectral characteristics of the soundscape.</p></li>
+<li><p>Temporal Indices:</p>
+<p><strong>Description</strong>: Indices that measure changes in sound over time.</p>
+<p><strong>Included Indices</strong>: ACTtCount, ACTtFraction, ACTtMean, BGNt, EVNtCount, EVNtFraction, EVNtMean, Ht, LEQt, MEANt, SKEWt, TFSD, VARt</p>
+<p><strong>Reason</strong>: These indices quantify how sound varies over time, capturing temporal patterns and dynamics in the soundscape.</p></li>
 </ol>
+<p>NOTE: for indices that required specification of frequency bands for calculations, we selected an imperfect representation for anthrophony and biophony. This is largely because of the overlap between anthropogenic noise and biological signals in the lower frequencies. So care should be taken when interpreting results. The bands for each dataset are broken out by the sampling rate of the dataset, as larger bandwidth allows for greater frequencies to use.</p>
+<p><strong>16 kHz Datasets:</strong></p>
+<ul>
+<li><p>Frequency thresholds: flim_low = 0-1,000 Hz | flim_mid = 1,000 - 4,000 Hz | flim_hi = 4,000 - 8,000 Hz</p></li>
+<li><p>Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,000 Hz | biophony band = 1,000 - 8,000 Hz</p>
+<p><strong>CAVEAT</strong>: We are aware there is biological and anthro energy in these bands! We can modify in future iterations but had to make a decision for initial exploration.</p></li>
+<li><p>ACI: Averaged over full bandwidth (also have ACI calculated at small band intervals, but not displayed in app)</p></li>
+</ul>
+<p><strong>Full Bandwidth Datasets:</strong></p>
+<ul>
+<li><p>Frequency thresholds: flim_low = 0-1,500 Hz | flim_mid = 1,500 - 8,000 Hz | flim_hi = 8,000 Hz - Nyquist</p></li>
+<li><p>Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,500 Hz | biophony band = 1,500 Hz - Nyquist</p>
+<p><strong>CAVEAT</strong>: We are aware there is biological and anthro energy in these bands! We can modify in future iterations but had to make a decision for initial exploration.</p></li>
+<li><p>ACI: Averaged over full bandwidth (also have ACI calculated at small band intervals, but not displayed in app)</p></li>
+</ul>
 <hr>
 </section>
 <section id="index-definitions" class="level3">
