@@ -5,7 +5,7 @@ subtitle: "Analytical Documentation"
 
 ### The BioSound Working Group
 
-The BioSound working group is composed of various scientists and stakeholders interested in producing acoustic-based data products that support marine biodiversity monitoring and conservation. BioSound is particularly interested in understanding the value of underwater soundscape metrics as indicators of biological and anthropogenic change in the context of biodiversity conservation. BioSound was formed as an initiative of the Marine Biodiversity Observation Network (MBON). Additional information regarding the goals and objectives of the group can be found at the [MBON BioSound](https://marinebon.org/biosound/) site.
+The BioSound working group is composed of various scientists and stakeholders interested in producing acoustic-based data products that support marine biodiversity monitoring and conservation. BioSound is particularly interested in understanding the value of underwater soundscape metrics as indicators of biological and anthropogenic change in the context of biodiversity conservation. BioSound was formed as an initiative of the Marine Biodiversity Observation Network (MBON). Additional information regarding the goals and objectives of the group can be found at the [MBON BioSound](https://marinebon.org/biosound/) site. This work was supported by the U.S. Marine Biodiversity Observation Network (MBON) co-organized by NOAA, NASA, BOEM, and ONR through the National Oceanographic Partnership Program (NOPP). 
 
 ### **Exploratory Project**
 
@@ -26,7 +26,7 @@ The datasets utilized in this study originate from diverse environments, includi
 ![](images/BioSound_Sites.jpeg){fig-align="center"}
 
 |       Dataset Name       |                   Source                   |            Contact            | Marine Ecosystem Type | Native Sampling Rate (kHz) |          Duty Cycle           | Native File Duration | Selected Months |
-|:----------------:|:----------:|:-----------:|:-------:|:-------:|:------:|:-------:|:-------------:|
+|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 |     Biscayne Bay, FL     |            University of Miami             | Neil Hammerschlag/Abby Tinari |       Mangrove        |             32             |    10 seconds every minute    |       0:00:10        | Feb - Mar, 2019 |
 | Chukchi Sea, Hanna Shoal |           Oregon Sate University           |         Kate Stafford         |       Offshore        |           16.384           |     25 minutes every hour     |       0:25:00        | Jan - Mar, 2019 |
 |     Gray's Reef, GA      |              NEFSC-SanctSound              |          Tim Rowell           |       Offshore        |             48             |          Continuous           |      \~5:40:00       | Jan - Feb, 2019 |
