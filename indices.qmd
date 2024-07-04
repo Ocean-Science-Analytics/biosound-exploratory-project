@@ -68,13 +68,13 @@ In scikit-maad, the acoustic-based indices can be categorized into several main 
 
     **Reason**: These indices quantify how sound varies over time, capturing temporal patterns and dynamics in the soundscape.
 
-NOTE: for indices that required specification of frequency bands for calculations, we selected an imperfect representation for anthrophony and biophony. This is largely because of the overlap between anthropogenic noise and biological signals in the lower frequencies. So care should be taken when interpreting results. The bands for each dataset are broken out by the sampling rate of the dataset, as larger bandwidth allows for greater frequencies to use.
+NOTE: for indices that required the specification of frequency bands for calculations, we selected an imperfect representation for anthrophony and biophony. This is largely because of the overlap between anthropogenic noise and biological signals in the lower frequencies. So care should be taken when interpreting results. The bands for each dataset are broken out by the sampling rate of the dataset, as larger bandwidth allows for greater frequencies to be used.
 
 **16 kHz Datasets:**
 
 -   Frequency thresholds: flim_low = 0-1,000 Hz \| flim_mid = 1,000 - 4,000 Hz \| flim_hi = 4,000 - 8,000 Hz
 
--   Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,000 Hz \| biophony band = 1,000 - 8,000 Hz
+-   Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,000 Hz \| biophony band = 1,000 - 8,000 Hz)
 
     **CAVEAT**: We are aware there is biological and anthro energy in these bands! We can modify in future iterations but had to make a decision for initial exploration.
 
@@ -84,7 +84,7 @@ NOTE: for indices that required specification of frequency bands for calculation
 
 -   Frequency thresholds: flim_low = 0-1,500 Hz \| flim_mid = 1,500 - 8,000 Hz \| flim_hi = 8,000 Hz - Nyquist
 
--   Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,500 Hz \| biophony band = 1,500 Hz - Nyquist
+-   Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,500 Hz \| biophony band = 1,500 Hz - Nyquist)
 
     **CAVEAT**: We are aware there is biological and anthro energy in these bands! We can modify in future iterations but had to make a decision for initial exploration.
 

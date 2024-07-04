@@ -218,18 +218,18 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Included Indices</strong>: ACTtCount, ACTtFraction, ACTtMean, BGNt, EVNtCount, EVNtFraction, EVNtMean, Ht, LEQt, MEANt, SKEWt, TFSD, VARt</p>
 <p><strong>Reason</strong>: These indices quantify how sound varies over time, capturing temporal patterns and dynamics in the soundscape.</p></li>
 </ol>
-<p>NOTE: for indices that required specification of frequency bands for calculations, we selected an imperfect representation for anthrophony and biophony. This is largely because of the overlap between anthropogenic noise and biological signals in the lower frequencies. So care should be taken when interpreting results. The bands for each dataset are broken out by the sampling rate of the dataset, as larger bandwidth allows for greater frequencies to use.</p>
+<p>NOTE: for indices that required the specification of frequency bands for calculations, we selected an imperfect representation for anthrophony and biophony. This is largely because of the overlap between anthropogenic noise and biological signals in the lower frequencies. So care should be taken when interpreting results. The bands for each dataset are broken out by the sampling rate of the dataset, as larger bandwidth allows for greater frequencies to be used.</p>
 <p><strong>16 kHz Datasets:</strong></p>
 <ul>
 <li><p>Frequency thresholds: flim_low = 0-1,000 Hz | flim_mid = 1,000 - 4,000 Hz | flim_hi = 4,000 - 8,000 Hz</p></li>
-<li><p>Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,000 Hz | biophony band = 1,000 - 8,000 Hz</p>
+<li><p>Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,000 Hz | biophony band = 1,000 - 8,000 Hz)</p>
 <p><strong>CAVEAT</strong>: We are aware there is biological and anthro energy in these bands! We can modify in future iterations but had to make a decision for initial exploration.</p></li>
 <li><p>ACI: Averaged over full bandwidth (also have ACI calculated at small band intervals, but not displayed in app)</p></li>
 </ul>
 <p><strong>Full Bandwidth Datasets:</strong></p>
 <ul>
 <li><p>Frequency thresholds: flim_low = 0-1,500 Hz | flim_mid = 1,500 - 8,000 Hz | flim_hi = 8,000 Hz - Nyquist</p></li>
-<li><p>Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,500 Hz | biophony band = 1,500 Hz - Nyquist</p>
+<li><p>Select indices that required two bands (BI, NDSI, rBA, AnthroEnergy, BioEnergy, ROU, ADI, AEI): anthrophony band = 0-1,500 Hz | biophony band = 1,500 Hz - Nyquist)</p>
 <p><strong>CAVEAT</strong>: We are aware there is biological and anthro energy in these bands! We can modify in future iterations but had to make a decision for initial exploration.</p></li>
 <li><p>ACI: Averaged over full bandwidth (also have ACI calculated at small band intervals, but not displayed in app)</p></li>
 </ul>
