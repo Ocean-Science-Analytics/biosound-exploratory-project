@@ -5,6 +5,8 @@ The BioSound working group is composed of various scientists and stakeholders in
 * Determine the occurrence of vessel traffic in the data in order to assess common trends on the impact of this noise on all indices. We also plan to use this information to extract measurements from periods without vessel traffic.
 * Relate acoustic indices to available, remotely sensed environmental data from each region to evaluate any relationships. We will specifically focus on satellite derived ocean color data products.
 
+This work was supported by the U.S. Marine Biodiversity Observation Network (MBON) co-organized by NOAA, NASA, BOEM, and ONR through the National Oceanographic Partnership Program (NOPP). 
+
 ## Project Documentation
 The methods and tool used in this project are documented in the website associated with this repository. Please visit https://ocean-science-analytics.github.io/biosound-exploratory-project/overview.html for additional project details. The documentation also shares the shinyapp used to relay information on data products for this project. 
 
